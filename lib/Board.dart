@@ -23,6 +23,7 @@ class BoardState extends State<Board> {
   final int cols = 9;
   final int numOfMines = 11;
 
+
   List<List<TileState>> uiState;
   //tiles will hold true/false for mines at each spot
   List<List<bool>> tiles;
@@ -32,6 +33,8 @@ class BoardState extends State<Board> {
   int minesFound;
   Timer timer;
   Stopwatch stopwatch = Stopwatch();
+
+  final double border_size = 15.0;
 
   @override
   void dispose() {
@@ -78,8 +81,9 @@ class BoardState extends State<Board> {
     super.initState();
   }
 
-  Widget buildBoard() {
+  Widget buildBoard(double container_width) {
     bool hasCoveredCell = false;
+    final double box_width = container_width/rows -5.0;
 
     List<Row> boardRow = <Row>[];
     for (int y = 0; y < rows; y++) {
@@ -109,6 +113,7 @@ class BoardState extends State<Board> {
                 flagged: state == TileState.flagged,
                 posX: x,
                 posY: y,
+                box_width: box_width,
               ),
             ), // Listener
           ), // Gesture Detector
@@ -120,6 +125,7 @@ class BoardState extends State<Board> {
           rowChildren.add(OpenMineTile(
             state: state,
             count: count,
+            box_width: box_width,
           ));
         }
       }
@@ -136,47 +142,26 @@ class BoardState extends State<Board> {
         //stopwatch.stop();
       }
     }
-    return Container(
-      height: 345.0,
-      padding: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-          border: Border(
-            left: BorderSide(width: 2.0, color: Colors.grey[600]),
-            right: BorderSide(width: 2.0, color: Colors.grey[600]),
-            bottom: BorderSide(width: 2.0, color: Colors.grey[600]),
-          ),
-          color: Colors.grey[400],
-          boxShadow: [BoxShadow(
-            color: Colors.black,
-            blurRadius: 2.0,
-          )]
+    return  Container(
 
-      ), // Box DEc
-      child: Container(
+        decoration: _buildBoxDecoration(2.0, [600,600,100,600], 500, BoxShadow(
+          color: Colors.grey[700],
+          blurRadius: 4.0,
+        )),
 
-        decoration: BoxDecoration(
-            border: Border(
-              left: BorderSide(width: 2.0, color: Colors.grey[600]),
-              right: BorderSide(width: 2.0, color: Colors.grey[600]),
-              bottom: BorderSide(width: 2.0, color: Colors.grey[100]),
-              top: BorderSide(width: 2.0, color: Colors.grey[600]),
-            ),
-            color: Colors.grey[500],
-            boxShadow: [BoxShadow(
-              color: Colors.grey[700],
-              blurRadius: 4.0,
-            )]
-        ), // Box DEc
         child: Column(
           children: boardRow,
         ), // Column
-      ),
+
     ); // Container
   }
 
 
   @override
   Widget build(BuildContext context) {
+    // Get screen size in order to make board adapt to different phones
+    final double screen_width = MediaQuery.of(context).size.width;
+    final double screen_height = MediaQuery.of(context).size.height;
     int minesLeft = numOfMines-minesFound;
     int timeElapsed = stopwatch.elapsedMilliseconds ~/ 1000;
     return Scaffold(
@@ -184,36 +169,39 @@ class BoardState extends State<Board> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Mine Sweeper'),
+        actions: <Widget>[],
       ), // Appbar
-      body: Container(
-        color: Colors.grey[50],
-        child: new Container(
-          padding: EdgeInsets.all(33.0),
-          color: Colors.grey[600],
-          child: Center(
-              child: Stack(
-                  children: [
-              TopBar(
-                     wonGame: wonGame,
-                     alive: alive,
-                     minesLeft: minesLeft,
-                     timeElapsed: timeElapsed,
-                     onReset: () {
-                       setState(() {
-                         resetBoard();
-                       });
-                     },
+      body: new Container(
+        height: screen_height,
+        width: screen_width,
+        color: Colors.grey[600],
+        child: Column(
+            children: [
+        TopBar(
+               wonGame: wonGame,
+               alive: alive,
+               minesLeft: minesLeft,
+               timeElapsed: timeElapsed,
+               onReset: () {
+                 setState(() {
+                   resetBoard();
+                 });
+               },
 
-              ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 100.0, bottom: 40.0),
-                      child: buildBoard(),
-                    ), // Padding
+        ),
+              Container(
+                height: screen_width,
+                padding: EdgeInsets.all(border_size),
+                decoration: _buildBoxDecoration(2.0, [600,600,600], 400, BoxShadow(
+                color: Colors.black,
+                blurRadius: 2.0,
+              )),
 
-                  ]
-              )
-          ),// Center
-        ), // Container
+                child: buildBoard(screen_width-border_size*2),
+              ), // Padding
+
+            ]
+        ),// Center
       ),// Container
     ); // Scaffold
   }
@@ -295,92 +283,75 @@ class BoardState extends State<Board> {
 }
 
 // Make inner and outer containers to add 3D like shape
-Widget buildTile(Widget child) {
+Widget buildTile(Widget child, double box_width) {
   return Container(
     padding: EdgeInsets.all(1.0),
-    height: 30.0,
-    width: 30.0,
-    decoration: BoxDecoration(
-      border: Border(
-        left: BorderSide(width: 2.0, color: Colors.grey[100]),
-        right: BorderSide(width: 3.0, color: Colors.grey[500]),
-        bottom: BorderSide(width: 2.0, color: Colors.grey[500]),
-        top: BorderSide(width: 2.0, color: Colors.grey[100]),
-      ),
-      color: Colors.grey[400],
-
-    ), // Box DEc
+    height: box_width,
+    width: box_width,
+    decoration: _buildBoxDecoration(2.0, [100,500,500, 100], 400, BoxShadow()),
     margin: EdgeInsets.all(2.0),
 
     child: child,
   );
 }
-Widget buildInnerTile2(Widget child) {
+
+Widget buildInnerTile2(Widget child, double box_width) {
   return Container(
     padding: EdgeInsets.all(1.0),
-    height: 30.0,
-    width: 30.0,
-    decoration: BoxDecoration(
-      border: Border(
-        left: BorderSide(width: 0.5, color: Colors.grey[500]),
-        right: BorderSide(width: 0.5, color: Colors.grey[100]),
-        bottom: BorderSide(width: 0.5, color: Colors.grey[100]),
-        top: BorderSide(width: 0.5, color: Colors.grey[500]),
-      ),
-      color: Colors.grey[400],
+    height: box_width,
+    width: box_width,
+    decoration: _buildBoxDecoration(2.0, [500,100,100, 500], 400, BoxShadow()),
 
-    ), // Box DEc
     margin: EdgeInsets.all(2.0),
 
     child: child,
   );
 }
-Widget buildInnerTile(Widget child) {
-  return Container(
-    padding: EdgeInsets.all(1.0),
-    margin: EdgeInsets.all(2.0),
-    height: 30.0,
-    width: 30.0,
 
-    child: child,
-  );
-}class CoveredMineTile extends StatelessWidget {
+
+class CoveredMineTile extends StatelessWidget {
   final bool flagged;
   final int posX;
   final int posY;
+  final double box_width;
 
-  CoveredMineTile({this.flagged, this.posX, this.posY});
+  CoveredMineTile({this.flagged, this.posX, this.posY, this.box_width});
 
   @override
   Widget build(BuildContext context) {
-    Widget text;
-    if (flagged) {
-      text = buildInnerTile(RichText(
-        text: TextSpan(
-          text: "\u2691", // Symbol for flag
-          style: TextStyle(
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-          ), // Text style
-        ), // Text Span
-      ));
-    }
+
     Widget innerTile = Container(
       padding: EdgeInsets.all(1.0),
       margin: EdgeInsets.all(2.0),
-      height: 20.0,
-      width: 20.0,
+      height: box_width*(2/3),
+      width: box_width*(2/3),
       color: Colors.grey[400],
-      child: text,
+      child: Container(
+        padding: EdgeInsets.all(1.0),
+        margin: EdgeInsets.all(2.0),
+        height: box_width,
+        width: box_width,
+
+        child: RichText(
+          text: TextSpan(
+            text: flagged ? "\u2691" : "", // Symbol for flag
+            style: TextStyle(
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+            ), // Text style
+          ), // Text Span
+        ),
+      ),
     );
-    return buildTile(innerTile);
+    return buildTile(innerTile, box_width);
   }
 }
 
 class OpenMineTile extends StatelessWidget {
   final TileState state;
   final int count;
-  OpenMineTile({this.state, this.count});
+  final double box_width;
+  OpenMineTile({this.state, this.count, this.box_width});
 
   final List textColor = [
     Colors.blue,
@@ -393,9 +364,11 @@ class OpenMineTile extends StatelessWidget {
     Colors.black,
   ];
 
+
   @override
   Widget build(BuildContext context) {
     Widget text;
+
     if (state == TileState.open) {
       if (count != 0) {
         text = //buildInnerTile2(
@@ -403,7 +376,7 @@ class OpenMineTile extends StatelessWidget {
           text: TextSpan(
             text: "$count", // Symbol for flag
             style: TextStyle(
-              color: textColor[count -1],
+              color: textColor[count - 1],
               fontWeight: FontWeight.bold,
               fontSize: 25.0,
               fontFamily: 'BebasNeue',
@@ -428,6 +401,28 @@ class OpenMineTile extends StatelessWidget {
       );//); // Rich Text
     }
 
-    return buildInnerTile2(text);
+    return Container(
+        padding: EdgeInsets.all(1.0),
+    height: box_width,
+    width: box_width,
+    decoration: _buildBoxDecoration(0.5, [500,100,100, 500], 400, BoxShadow()),
+
+    margin: EdgeInsets.all(2.0),
+
+    child: text,
+    );
+
   }
+}
+BoxDecoration _buildBoxDecoration(double width, List<int> greys, int colorgrey, BoxShadow boxshadow) {
+  return BoxDecoration(
+      border: Border(
+        left: BorderSide(width: width, color: Colors.grey[greys[0]]),
+        right: BorderSide(width: width, color: Colors.grey[greys[1]]),
+        bottom: BorderSide(width: width, color: Colors.grey[greys[2]]),
+        top: (greys.length<3) ? BorderSide(width: width, color: Colors.grey[greys[3]]):BorderSide(color: Colors.grey[colorgrey],),
+      ),
+      color: Colors.grey[colorgrey],
+      boxShadow: [boxshadow]
+  ); // Box DEc
 }
