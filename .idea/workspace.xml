@@ -39,11 +39,18 @@
           <file leaf-file-name="Board.dart" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/Board.dart">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="4368">
                   <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                     <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+                <state relative-caret-position="4095">
+                  <caret line="198" column="36" lean-forward="true" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#20#0" expanded="true" />
+>>>>>>> layouts
                   </folding>
                 </state>
               </provider>
@@ -52,11 +59,18 @@
           <file leaf-file-name="TopBar.dart" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/TopBar.dart">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="546">
                   <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                     <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+                <state relative-caret-position="672">
+                  <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#0#20#0" expanded="true" />
+>>>>>>> layouts
                   </folding>
                 </state>
               </provider>
@@ -69,11 +83,18 @@
           <file leaf-file-name="Board.dart" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/Board.dart">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="450">
                   <caret line="432" column="0" lean-forward="false" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                     <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+                <state relative-caret-position="282">
+                  <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#20#0" expanded="true" />
+>>>>>>> layouts
                   </folding>
                 </state>
               </provider>
@@ -231,7 +252,11 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< HEAD
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1535675070280" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1535674944697" />
+>>>>>>> layouts
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -279,7 +304,11 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+<<<<<<< HEAD
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1535675070281" />
+=======
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1535674944697" />
+>>>>>>> layouts
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -563,7 +592,10 @@
           <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -574,7 +606,10 @@
           <caret line="68" column="25" lean-forward="false" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -595,7 +630,10 @@
           <caret line="63" column="3" lean-forward="false" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -606,7 +644,10 @@
           <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -627,7 +668,10 @@
           <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -638,7 +682,10 @@
           <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -659,7 +706,10 @@
           <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -670,7 +720,10 @@
           <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -691,7 +744,10 @@
           <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -702,7 +758,10 @@
           <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -723,7 +782,10 @@
           <caret line="172" column="8" lean-forward="false" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -734,7 +796,10 @@
           <caret line="50" column="15" lean-forward="false" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -762,7 +827,10 @@
           <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -773,7 +841,10 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -794,7 +865,10 @@
           <caret line="136" column="7" lean-forward="true" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -805,7 +879,10 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -826,7 +903,10 @@
           <caret line="112" column="26" lean-forward="false" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -837,7 +917,10 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -858,7 +941,10 @@
           <caret line="112" column="26" lean-forward="false" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -869,7 +955,10 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -890,7 +979,10 @@
           <caret line="125" column="19" lean-forward="true" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -901,7 +993,10 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
@@ -946,22 +1041,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/TopBar.dart">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="546">
           <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <marker date="1535675055191" expanded="true" signature="4363:4365" ph="{...}" />
+=======
+        <state relative-caret-position="672">
+          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Board.dart">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="450">
           <caret line="432" column="0" lean-forward="false" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
             <marker date="1535675055187" expanded="true" signature="336:412" ph="{...}" />
+=======
+        <state relative-caret-position="282">
+          <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+>>>>>>> layouts
           </folding>
         </state>
       </provider>
