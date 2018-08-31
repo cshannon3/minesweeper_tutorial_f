@@ -35,6 +35,7 @@ class BoardState extends State<Board> {
   Stopwatch stopwatch = Stopwatch();
 
   final double border_size = 15.0;
+  final double barheight = 80.0;
 
   @override
   void dispose() {
@@ -177,7 +178,9 @@ class BoardState extends State<Board> {
         color: Colors.grey[600],
         child: Column(
             children: [
+              Expanded(child:Container()),
         TopBar(
+              barheight: barheight,
                wonGame: wonGame,
                alive: alive,
                minesLeft: minesLeft,
@@ -199,7 +202,7 @@ class BoardState extends State<Board> {
 
                 child: buildBoard(screen_width-border_size*2),
               ), // Padding
-
+              Expanded(child:Container()),
             ]
         ),// Center
       ),// Container
